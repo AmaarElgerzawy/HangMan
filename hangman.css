@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: #00a0d142;
+  padding: 10px;
+}
+.container {
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border: 5px solid #222578;
+  padding: 10px;
+}
+.container .userinfo {
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border:4px solid #222 ;
+  margin: 5px auto ;
+  display: flex;
+  flex-flow: row wrap;
+  color: rgb(75, 62, 62);
+}
+.container h2 {
+  width: 100%;
+  text-align: center;
+  color: rgb(158, 16, 16);
+}
+.container .userinfo div {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container .userinfo span {
+  color: #e93b61;
+}
+.container .draw {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 280px;
+  max-height: 280px;
+  background-color: #eee;
+  position: relative;
+  border: 2px solid #222;
+  margin-top: 20px;
+}
+.container .draw > div {
+  position: absolute;
+  background-color: #222;
+  display: none;
+}
+.container .draw .stand {
+  top: 250px;
+  left: 65px;
+  height: 4px;
+  width: 75px;
+}
+.container .draw .pole{
+  width: 4px;
+  height: 225px;
+  top: 25px;
+  left: 100px;
+}
+.container .draw .stake{
+  width: 100px;
+  height: 4px;
+  top: 35px;
+  left: 100px;
+}
+.container .draw .rope{
+  width: 4px;
+  height: 40px;
+  top: 35px;
+  left: 200px;
+}
+.container .draw .circle{
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  top: 75px;
+  left: 170px;
+  border-radius: 50%;
+  border: 5px dashed #222;
+}
+.container .draw .head{
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  top: 85px;
+  left: 180px;
+  border-radius: 50%;
+  border: 5px solid #222;
+}
+.container .draw .body{
+  width: 4px;
+  height: 90px;
+  top: 120px;
+  left: 200px;
+}
+.container .draw .arms {
+  width: 4px;
+  height: 10px;
+  top: 145px;
+  left: 200px;
+  margin: 0;
+}
+.container .draw .arms::before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  top: 10px;
+  left: -35px;
+  background-color: black;
+  transform: rotate(-30deg);
+}
+.container .draw .arms::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  top: 10px;
+  left: 0px;
+  background-color: black;
+  transform: rotate(30deg);
+}
+.container .draw .leg {
+  top: 205px;
+  left: 200px;
+  margin: 0;
+}
+.container .draw .leg::before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  top: 10px;
+  left: -35px;
+  background-color: black;
+  transform: rotate(-30deg);
+}
+.container .draw .leg::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  top: 10px;
+  left: 0px;
+  background-color: black;
+  transform: rotate(30deg);
+}
+.container .chooseletter {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  outline: 1px solid gray;
+  padding: 10px 15px;
+  margin: 5px auto;
+}
+.container .chooseletter > span {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #759172;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  margin: 5px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.container .game {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.container .game > span {
+  width: 25px;
+  height: 30px;
+  padding: 5px;
+  background-color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+  margin: 5px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border-bottom: 4px solid #222;
+}
+.speace {
+  height: 0 !important;
+  border: none !important;
+  background: black !important;
+  padding: 2.5px !important;
+  margin-top: 15px !important;
+}
+.pass {
+  display: block !important;
+}
+.died {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.win , .lose{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #e93b617c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+  display: none;
+}
+.end {
+  display: inline-block;
+}
